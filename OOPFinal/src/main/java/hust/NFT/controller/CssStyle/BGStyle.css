@@ -1,0 +1,20 @@
+.background{
+    -fx-background-image: url('../images/NFT-Site_0.jpg'); 
+    -fx-background-size: cover;
+}
+
+.icon{
+	-fx-background-image: url('../images/HistoryIconTitle.png'); 
+    -fx-background-size: 100 50;
+}
+
+.nft_xoafont{
+	-fx-background-image: url('../images/1_NtSF6qUaX4qe3EnGd2h-fQ.png'); 
+    -fx-background-size: 165 165;
+}
+
+.meo_xoafont{
+	-fx-background-image: url('../images/410868555_668753722134906_4447396645632417626_n.png'); 
+    -fx-background-size: 165 165;
+}
+

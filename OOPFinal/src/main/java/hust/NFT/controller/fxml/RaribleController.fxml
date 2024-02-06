@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="OOP-17 NFTs" textFill="#00f0f0">
+               <font>
+                  <Font name="System Bold Italic" size="50.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="450.0" top="13.5" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <VBox prefHeight="700.0" prefWidth="165.0" style="-fx-background-color: #EABFFF;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnHome" layoutX="43.0" layoutY="145.0" mnemonicParsing="false" onAction="#btnHomePressed" prefHeight="50.0" prefWidth="120.0" text="Home">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Label prefHeight="35.0" prefWidth="141.0" text="NFT Exchange:" textFill="#fff600">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="50.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="btnOpenSea" mnemonicParsing="false" onAction="#btnOpenSeaPressed" prefHeight="30.0" prefWidth="100.0" text="OpenSea">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="32.5" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Rarible">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="32.5" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnNiftyGateway" mnemonicParsing="false" onAction="#btnNiftyGatewayPressed" prefHeight="35.0" prefWidth="100.0" text="NiftyGateway">
+               <VBox.margin>
+                  <Insets left="32.5" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Label prefHeight="35.0" prefWidth="141.0" text="Top trend:" textFill="#fff600">
+               <VBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="radiobBtnByDay" mnemonicParsing="false" prefWidth="100.0" selected="true" text="By Day">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="32.5" top="20.0" />
+               </VBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="filterCat" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radiobBtnByWeek" mnemonicParsing="false" text="By Week" toggleGroup="$filterCat">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="32.5" top="20.0" />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="radiobBtnByMonth" mnemonicParsing="false" prefHeight="30.0" text="By Month" toggleGroup="$filterCat">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="32.5" top="20.0" />
+               </VBox.margin>
+            </RadioButton>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="background" stylesheets="@../CssStyle/BGStyle.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="90.0" prefWidth="1035.0" style="-fx-background-color: blue;">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="100.0" text="Filter" textFill="#08bf2a">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfFilter" prefHeight="40.0" prefWidth="250.0" promptText="#Title">
+                     <HBox.margin>
+                        <Insets right="100.0" top="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#btnTweetPressed" prefHeight="50.0" prefWidth="120.0" text="Tweet">
+                     <HBox.margin>
+                        <Insets right="65.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnNfts" mnemonicParsing="false" onAction="#btnNftsPressed" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #808080;" text="NFTs">
+                     <HBox.margin>
+                        <Insets right="65.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnBlogPressed" prefHeight="50.0" prefWidth="120.0" text="Blog">
+                     <HBox.margin>
+                        <Insets right="65.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Pane prefHeight="520.0" prefWidth="1035.0">
+               <children>
+                  <TableView fx:id="tblRarible" prefHeight="519.0" prefWidth="1035.0">
+                    <columns>
+                      <TableColumn fx:id="colRaribleType" prefWidth="90.95945739746094" text="Type" />
+                      <TableColumn fx:id="colRaribleId" prefWidth="77.41030883789062" text="ID" />
+                        <TableColumn fx:id="colRaribleTitle" prefWidth="140.2542724609375" text="Title" />
+                        <TableColumn fx:id="colRaribleVolume" minWidth="0.0" prefWidth="102.74569702148438" text="Volume" />
+                        <TableColumn fx:id="colRaribleVolumeChange" prefWidth="123.19659423828125" text="Volume change" />
+                        <TableColumn fx:id="colRaribleFloorPrice" prefWidth="116.138916015625" text="Floor price" />
+                        <TableColumn fx:id="colRaribleFloorChange" prefWidth="131.237060546875" text="Floor change" />
+                        <TableColumn fx:id="colRaribleOwners" prefWidth="132.82672119140625" text="Owners" />
+                        <TableColumn fx:id="colRaribleItems" prefWidth="124.7689208984375" text="Items" />
+                    </columns>
+                  </TableView>
+                  <Pane fx:id="paneText" prefHeight="200.0" prefWidth="1035.0">
+                     <children>
+                        <HBox prefHeight="520.0" prefWidth="1035.0">
+                           <children>
+                              <ScrollPane fx:id="spTweet" prefHeight="520.0" prefWidth="535.0">
+                                 <content>
+                                    <GridPane fx:id="gpTweet" prefHeight="520.0" prefWidth="535.0">
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                    </GridPane>
+                                 </content>
+                              </ScrollPane>
+                              <Pane fx:id="paneBlog" prefHeight="520.0" prefWidth="500.0">
+                                 <children>
+                                    <TableView fx:id="tbBlog" prefHeight="520.0" prefWidth="500.0">
+                                      <columns>
+                                        <TableColumn fx:id="colId" prefWidth="20.0" text="ID" />
+                                        <TableColumn fx:id="colTitle" prefWidth="480.0" text="Title" />
+                                      </columns>
+                                    </TableView>
+                                    <ScrollPane fx:id="spBlog" prefHeight="520.0" prefWidth="500.0">
+                                       <content>
+                                          <GridPane fx:id="gpBlog" prefHeight="520.0" prefWidth="500.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                             <children>
+                                                <TextArea fx:id="taBlog" prefHeight="520.0" prefWidth="500.0" />
+                                             </children>
+                                             <rowConstraints>
+                                                <RowConstraints />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox prefHeight="90.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="90.0" prefWidth="600.0" style="-fx-background-color: pink;">
+               <children>
+                  <Label text="Crawled Date: ">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="labelTime" text="Time">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="90.0" prefWidth="600.0" style="-fx-background-color: pink;">
+               <children>
+                  <Button fx:id="btnBack" mnemonicParsing="false" onAction="#btnBackPressed" prefHeight="40.0" prefWidth="100.0" text="Back">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnExit" mnemonicParsing="false" onAction="#btnExitPressed" prefHeight="40.0" prefWidth="100.0" text="Exit">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="300.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
